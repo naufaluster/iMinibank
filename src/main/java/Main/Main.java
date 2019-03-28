@@ -1,10 +1,9 @@
 package Main;
 
-import Implements.CustomerImpl;
-import Interfaces.ICustomer;
-
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
+
+import static ErrorMenu.WrongInput.errorStartMenu;
 
 /**
  * Owned by Naufal Muhammad Ischyros
@@ -30,25 +29,25 @@ public class Main {
         try {
             String startmenu = input.readLine();
 
-            if ("0".equals(startmenu)) {
-                System.out.println();
-                System.out.println("Thank you for banking with us!");
-                System.exit(0);
+            switch (startmenu) {
+                case "0":
+                    System.out.println();
+                    System.out.println("Thank you for banking with us!");
+                    System.exit(0);
+                    break;
 
-            } else if ("1".equals(startmenu)) {
-                // insertDataCustomer();
-                startMenu();
-
-            } else {
-                System.out.println();
-                System.out.println("Wrong choice, please input the right choice!");
-//                    errorStartMenu();
-
+                case "1":
+//                    insertDataCustomer();
+                    startMenu();
+                    break;
+                default:
+                    System.out.println();
+                    System.out.println("Wrong choice, please input the right choice!");
+                    errorStartMenu();
+                    break;
             }
         } catch (Exception e) {
             e.printStackTrace();
         }
     }
-
-
 }
