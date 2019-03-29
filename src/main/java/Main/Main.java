@@ -4,6 +4,8 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 
 import static ErrorMenu.WrongInput.errorStartMenu;
+import static MainMenu.CustomerMenu.MainMenu;
+import static StartMenu.Login.LoginMenu;
 import static StartMenu.Register.insertDataCustomer;
 
 /**
@@ -31,22 +33,25 @@ public class Main {
         try {
             String startmenu = input.readLine();
 
-            switch (startmenu) {
-                case "0":
-                    System.out.println();
-                    System.out.println("Thank you for banking with us!");
-                    System.exit(0);
-                    break;
-
-                case "1":
-                    insertDataCustomer();
+            if (startmenu.equals("0")) {
+                System.out.println();
+                System.out.println("See you later!");
+                System.exit(0);
+            } else if (startmenu.equals("1")) {
+                insertDataCustomer();
+                MainMenu();
+            } else if (startmenu.equals("2")) {
+                if (LoginMenu()) {
+                    System.out.println("Login success");
+                    MainMenu();;
+                } else {
+                    System.out.println("Login failed");
                     startMenu();
-                    break;
-                default:
-                    System.out.println();
-                    System.out.println("Wrong choice, please input the right choice!");
-                    errorStartMenu();
-                    break;
+                }
+            } else {
+                System.out.println();
+                System.out.println("Wrong choice, please input the right choice!");
+                errorStartMenu();
             }
         } catch (Exception e) {
             e.printStackTrace();

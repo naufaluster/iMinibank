@@ -2,7 +2,6 @@ package Implements;
 
 import Database.AAConnect;
 import Database.AccountData;
-import Database.CustomerData;
 import Entity.Account;
 import Interfaces.IAccount;
 
@@ -19,7 +18,6 @@ public class AccountImpl implements IAccount {
         accountData = new AccountData(AAConnect.getConnection());
     }
 
-    @Override
     public List<Account> listaccount() {
         return accountData.getListAccount();
     }

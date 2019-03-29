@@ -21,4 +21,8 @@ public class CustomerImpl implements ICustomer {
         return customerData.addCustomer(customer);
     }
 
+    public Customer login(String username, String password) {
+        return customerData.login(username, password);
+    }
+
 }

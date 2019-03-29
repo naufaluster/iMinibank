@@ -7,4 +7,5 @@ import Entity.Customer;
  */
 public interface ICustomer {
     Boolean addCustomer(Customer customer);
+    Customer login(String username, String password);
 }

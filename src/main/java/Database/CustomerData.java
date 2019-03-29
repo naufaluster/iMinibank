@@ -35,4 +35,14 @@ public class CustomerData {
         return false;
     }
 
+    public Customer login(String username, String password) {
+        Session sesn = factory.openSession();
+            Query query = sesn.createQuery("From customer where username = :username and password = :password ");
+            query.setParameter("username", username);
+            query.setParameter("password", password);
+            Customer customer = (Customer) query.uniqueResult();
+            return customer;
+        }
+
+
 }

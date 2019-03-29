@@ -1,6 +1,5 @@
 package StartMenu;
 
-import Database.CustomerData;
 import Entity.Customer;
 import Implements.CustomerImpl;
 import Interfaces.ICustomer;
