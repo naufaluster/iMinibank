@@ -74,7 +74,9 @@ public class Register {
             //Input Birthdate
             customer.setBirthdate(year + month + date);
 
+            System.out.println();
             icustomer.addCustomer(customer);
+            System.out.println("Values have been saved");
         } catch (Exception e) {
             e.printStackTrace();
         }
