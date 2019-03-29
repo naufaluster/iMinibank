@@ -22,11 +22,12 @@ public class Main {
         startMenu();
     }
     public static void startMenu() {
-        System.out.println("\n===== Welcome =====");
+        System.out.println("\n<===== Welcome =====>");
         System.out.println("1. Register");
         System.out.println("2. Login");
+        System.out.println();
         System.out.println("0. Exit");
-        System.out.println("===================");
+        System.out.println("<===================>");
         System.out.println("");
         System.out.print("Enter choice> ");
 

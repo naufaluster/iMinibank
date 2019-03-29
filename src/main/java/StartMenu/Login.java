@@ -20,12 +20,13 @@ public class Login {
 
     public static boolean LoginMenu() {
         try {
-            System.out.println("Login");
-            System.out.print("Username: ");
+            System.out.println("<== Login ==>");
+            System.out.println( "| " + padRight("Username", 10) + (": "));
             String username = input.readLine().trim();
 //            customer.setUsername(input.readLine().trim());
-            System.out.print("Password: ");
+            System.out.println( "| " + padRight("Password", 10) + (": "));
             String password = input.readLine().trim();
+            System.out.println("<===========>");
 //            customer.setPassword(input.readLine().trim());
             customer = iCustomer.login(username, password);
             if (customer != null) {
@@ -37,4 +38,9 @@ public class Login {
         }
         return false;
     }
+
+    private static String padRight(String text, int l) {
+        return String.format("%1$-" + l + "s", text);
+    }
+
 }
