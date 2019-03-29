@@ -1,5 +1,6 @@
 package Database;
 
+import Entity.Account;
 import Entity.Customer;
 import org.hibernate.SessionFactory;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
@@ -20,7 +21,7 @@ public class AAConnect {
         Configuration config = new Configuration();
         config.configure();
         config.addAnnotatedClass(Customer.class);
-//      config.addAnnotatedClass(Account.class);
+      config.addAnnotatedClass(Account.class);
 //		config.addResource("query.hbm.xml");
 //		config.addResource("Customer.hbm.xml");
         serviceRegistry = new StandardServiceRegistryBuilder().applySettings(config.getProperties()).build();

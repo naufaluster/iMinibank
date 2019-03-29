@@ -4,6 +4,7 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 
 import static ErrorMenu.WrongInput.errorStartMenu;
+import static StartMenu.Register.insertDataCustomer;
 
 /**
  * Owned by Naufal Muhammad Ischyros
@@ -37,7 +38,7 @@ public class Main {
                     break;
 
                 case "1":
-//                    insertDataCustomer();
+                    insertDataCustomer();
                     startMenu();
                     break;
                 default:

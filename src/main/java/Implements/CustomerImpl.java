@@ -13,11 +13,12 @@ public class CustomerImpl implements ICustomer {
 
     private CustomerData customerData;
 
-    public CustomerData(){
+    public CustomerImpl(){
         customerData = new CustomerData(AAConnect.getConnection());
     }
 
     public Boolean addCustomer(Customer customer) {
         return customerData.addCustomer(customer);
     }
+
 }

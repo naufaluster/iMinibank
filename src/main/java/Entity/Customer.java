@@ -1,5 +1,6 @@
 package Entity;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
@@ -8,13 +9,28 @@ import javax.persistence.Table;
  * Owned by Naufal Muhammad Ischyros
  */
 
-@Entity
+@Entity(name = "customer")
 @Table(name = "customer")
 public class Customer {
 
     @Id
+    @Column (name = "cif")
+    private String cif;
 
-    private String cif, firstname, lastname, birthdate, username, password;
+    @Column (name = "firstname")
+    private String firstname;
+
+    @Column (name = "lastname")
+    private String lastname;
+
+    @Column (name = "birthdate")
+    private String birthdate;
+
+    @Column (name = "username")
+    private String username;
+
+    @Column (name = "password")
+    private String password;
 
     public String getCif() {
         return cif;
@@ -63,5 +79,4 @@ public class Customer {
     public void setPassword(String password) {
         this.password = password;
     }
-
 }
