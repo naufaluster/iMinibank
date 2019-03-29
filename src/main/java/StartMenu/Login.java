@@ -20,13 +20,13 @@ public class Login {
 
     public static boolean LoginMenu() {
         try {
-            System.out.println("<== Login ==>");
-            System.out.println( "| " + padRight("Username", 10) + (": "));
+            System.out.println("=== Login ===");
+            System.out.print( "| " + padRight("Username", 10) + (": "));
             String username = input.readLine().trim();
 //            customer.setUsername(input.readLine().trim());
-            System.out.println( "| " + padRight("Password", 10) + (": "));
+            System.out.print( "| " + padRight("Password", 10) + (": "));
             String password = input.readLine().trim();
-            System.out.println("<===========>");
+            System.out.println("=============");
 //            customer.setPassword(input.readLine().trim());
             customer = iCustomer.login(username, password);
             if (customer != null) {

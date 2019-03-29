@@ -20,10 +20,10 @@ public class CustomerMenu {
     static BufferedReader input = new BufferedReader(inputStreamReader);
 
     public static void MainMenu() {
-        System.out.println("\n<======= iBank =======>");
+        System.out.println("\n==== Main Menu ====");
         System.out.println("1. Profile");
         System.out.println("2. Account");
-        System.out.println("3. Wallet");
+        System.out.println("3. E-Wallet");
         System.out.println("4. Transaction");
         System.out.println();
         System.out.println("0. Logout");

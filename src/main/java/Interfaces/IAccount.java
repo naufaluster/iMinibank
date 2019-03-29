@@ -10,7 +10,7 @@ import java.util.List;
  */
 public interface IAccount {
 
-    List<Account> listaccount();
+    List<Account> listaccount(String cif);
 
 
 

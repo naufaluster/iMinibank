@@ -18,7 +18,7 @@ public class AccountImpl implements IAccount {
         accountData = new AccountData(AAConnect.getConnection());
     }
 
-    public List<Account> listaccount() {
-        return accountData.getListAccount();
+    public List<Account> listaccount(String cif) {
+        return accountData.getListAccount(cif);
     }
 }

@@ -22,7 +22,7 @@ public class AccountData {
         factory = connection;
     }
 
-    public List<Account> getListAccount() {
+    public List<Account> getListAccount(String cif) {
         Session sesn = factory.openSession();
         List<Account> listaccount = new ArrayList<Account>();
         try{
