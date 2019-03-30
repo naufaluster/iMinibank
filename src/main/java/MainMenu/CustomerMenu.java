@@ -24,7 +24,7 @@ public class CustomerMenu {
         System.out.println("1. Profile");
         System.out.println("2. Account");
         System.out.println("3. E-Wallet");
-        System.out.println("4. Transaction");
+        System.out.println("4. List Transaction");
         System.out.println();
         System.out.println("0. Logout");
         System.out.println("");
@@ -36,6 +36,7 @@ public class CustomerMenu {
             if (choice.equals("0")) {
                 System.out.println();
                 System.out.println("Thank you for banking with us!");
+                System.exit(0);
                 startMenu();
             } else if (choice.equals("1")) {
                 Profile();
@@ -48,9 +49,6 @@ public class CustomerMenu {
                 MainMenu();
             } else if (choice.equals("4")) {
                 Transaction();
-                MainMenu();
-            } else if (choice.equals("0")) {
-                startMenu();
                 MainMenu();
             } else {
                 System.out.println();

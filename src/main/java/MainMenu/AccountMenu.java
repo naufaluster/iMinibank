@@ -7,9 +7,16 @@ import Interfaces.IAccount;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
+import java.util.Calendar;
 import java.util.List;
+import java.util.Random;
+import java.util.TimeZone;
 
+import static Main.Main.failed;
+import static Main.Main.success;
 import static MainMenu.CustomerMenu.MainMenu;
+import static StartMenu.Login.addAccount;
+import static StartMenu.Register.padRight;
 
 /**
  * Owned by Naufal Muhammad Ischyros
@@ -21,14 +28,14 @@ public class AccountMenu {
     static InputStreamReader inputStreamReader = new InputStreamReader(System.in);
     static BufferedReader input = new BufferedReader(inputStreamReader);
 
-    static IAccount iAccount = new AccountImpl();
-    static Account account = new Account();
-    static Customer customer = new Customer();
+    static AccountMenu accountMenu;
+
+//    static Customer customer = new Customer();
 
 
 
     public static void Account() {
-        System.out.println("\n<===== Account =====>");
+        System.out.println("\n===== Account =====");
         System.out.println("1. List Account");
         System.out.println("2. Add");
         System.out.println("3. Remove");
@@ -43,10 +50,10 @@ public class AccountMenu {
             if (choice.equals("0")) {
                 MainMenu();
             } else if (choice.equals("1")) {
-                listAccount(iAccount.listaccount(customer.getCif()));
+//                listAccount(iAccount.listaccount(customer.getCif()));
                 Account();
             } else if (choice.equals("2")) {
-//                addAccount(customer.getCif());
+                addAccount();
                 Account();
             } else if (choice.equals("3")) {
 //                removeAccount();
@@ -60,6 +67,6 @@ public class AccountMenu {
         }
     }
 
-    private static void listAccount(List<Account> listaccount) {
-    }
+
+
 }

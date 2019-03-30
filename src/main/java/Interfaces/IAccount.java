@@ -1,6 +1,7 @@
 package Interfaces;
 
 import Entity.Account;
+import Entity.Customer;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -10,8 +11,6 @@ import java.util.List;
  */
 public interface IAccount {
 
-    List<Account> listaccount(String cif);
-
-
+    boolean addAccount(Account account);
 
 }

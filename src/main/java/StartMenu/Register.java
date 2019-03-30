@@ -81,7 +81,7 @@ public class Register {
         }
     }
 
-    private static String padRight(String text, int l) {
+    public static String padRight(String text, int l) {
         return String.format("%1$-" + l + "s", text);
     }
 }

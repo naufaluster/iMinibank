@@ -1,6 +1,7 @@
 package Entity;
 
 import javax.persistence.*;
+import java.util.Calendar;
 
 /**
  * Owned by Naufal Muhammad Ischyros
@@ -17,14 +18,15 @@ public class Account {
     @Column (name = "AccountName")
     private String AccountName;
 
+    @Temporal(TemporalType.TIMESTAMP)
     @Column (name = "openDate")
-    private String openDate;
+    private Calendar openDate;
 
     @Column (name = "balance")
-    private String balance;
+    private int balance;
 
     @ManyToOne
-    @JoinColumn (name = "cif")
+    @JoinColumn (name = "customerNumber")
     private Customer customerNumber;
 
     public String getAccountNumber() {
@@ -43,19 +45,19 @@ public class Account {
         AccountName = accountName;
     }
 
-    public String getOpenDate() {
+    public Calendar getOpenDate() {
         return openDate;
     }
 
-    public void setOpenDate(String openDate) {
+    public void setOpenDate(Calendar openDate) {
         this.openDate = openDate;
     }
 
-    public String getBalance() {
+    public int getBalance() {
         return balance;
     }
 
-    public void setBalance(String balance) {
+    public void setBalance(int balance) {
         this.balance = balance;
     }
 
@@ -66,4 +68,5 @@ public class Account {
     public void setCustomerNumber(Customer customerNumber) {
         this.customerNumber = customerNumber;
     }
+
 }

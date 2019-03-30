@@ -22,12 +22,12 @@ public class Main {
         startMenu();
     }
     public static void startMenu() {
-        System.out.println("\n<===== Welcome =====>");
+        System.out.println("\n===== Welcome =====");
         System.out.println("1. Register");
         System.out.println("2. Login");
         System.out.println();
         System.out.println("0. Exit");
-        System.out.println("<===================>");
+        System.out.println("===================");
         System.out.println("");
         System.out.print("Enter choice> ");
 
@@ -57,5 +57,17 @@ public class Main {
         } catch (Exception e) {
             e.printStackTrace();
         }
+    }
+
+    public static void success() {
+        System.out.println("Proccess success");
+    }
+
+    public static void failed() {
+        System.out.println("Process failed");
+    }
+
+    static void notFound() {
+        System.out.println("Data not found");
     }
 }
